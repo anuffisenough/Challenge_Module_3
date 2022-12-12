@@ -4,11 +4,21 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
  
-  passwordLength = window.prompt("Please choose a password length as a whole number from 8 to 128 characters.", "");
+  var passwordLength = window.prompt("Please choose a password length as a whole number from 8 to 128 characters.", "");
 
-  window.alert("Thank you!")
+  expression1 = (passwordLength >= 8);
+  expression2 = (passwordLength <= 128);
 
-  passwordUpperCase = window.prompt("Should the password include uppercase letters? Y or N")
+  if (expression1 && expression2) {
+    window.alert("Thank you!")
+  } else {
+    window.prompt("Please choose a password length as a whole number from 8 to 128 characters.", "");
+    window.prompt("Please choose a password length as a whole number from 8 to 128 characters.", "");
+    window.prompt("Please choose a password length as a whole number from 8 to 128 characters.", "");
+    window.alert("Thank you!");
+  }
+
+  passwordUpperCase = window.prompt("Should the password include uppercase letters? Y or N", "")
 
   window.alert("Thank you!")
 
