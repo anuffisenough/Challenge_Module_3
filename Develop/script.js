@@ -6,23 +6,23 @@ function writePassword() {
  
   var passwordLength = window.prompt("Please choose a password length as a whole number from 8 to 128 characters.", "");
 
-  window.alert("Thank you!")
+    window.alert("Thank you!")
 
   var passwordCase = window.prompt("Should the password include uppercase letters? Y or N", "")
 
-  window.alert("Thank you!")
+    window.alert("Thank you!")
 
   var passwordNumerals = window.prompt("Should the password include numeric values? Y or N")
 
-  window.alert("Thank you!")
+    window.alert("Thank you!")
 
   var passwordSpecialNumberals = window.prompt("Should the password include special characters? Y or N")
 
-  window.alert("Thank you!")
+    window.alert("Thank you!")
+
+    
 
   window.alert("Please view your password below")
-
-
 
   var password = generatePassword();
 
