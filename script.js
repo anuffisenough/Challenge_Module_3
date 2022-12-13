@@ -2,8 +2,9 @@
 var generateBtn = document.querySelector("#generate");
 var upperCaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lowerCaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var numerals = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var specialCharacters = [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
+var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var special = [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
+var passwordArray = [];
 
 // Write password to the #password input
 function writePassword() {
@@ -16,7 +17,10 @@ function writePassword() {
   };
 
   var upperCase = prompt("Should the password include upper case letters? Y or N")
-  if (upperCase == "y" || upperCase == "n") {
+  if (upperCase == "y") {
+    alert("Thank you!");
+    passwordArray.push(upperCaseLetters);
+  } else if (upperCase == "n") {
     alert("Thank you!");
   } else if (upperCase != "y" && upperCase != "n") {
     prompt("Please enter a valid response. Should the password include upper case letters? Y or N", "");
@@ -24,7 +28,10 @@ function writePassword() {
   };
 
   var lowerCase = prompt("Should the password include lower case letters? Y or N")
-  if (lowerCase == "y" || lowerCase == "n") {
+  if (lowerCase == "y") {
+    alert("Thank you!");
+    passwordArray.push(lowerCaseLetters);
+  } else if (lowerCase == "n") {
     alert("Thank you!");
   } else if (lowerCase != "y" && lowerCase != "n") {
     prompt("Please enter a valid response. Should the password include lower case letters? Y or N", "");
@@ -32,7 +39,10 @@ function writePassword() {
   };
 
   var numbers = prompt("Should the password include numbers? Y or N")
-  if (numbers == "y" || numbers == "n") {
+  if (numbers == "y") {
+    alert("Thank you!");
+    passwordArray.push(numbers);
+  } else if (numbers == "n") {
     alert("Thank you!");
   } else if (numbers != "y" && numbers != "n") {
     prompt("Please enter a valid response. Should the password include numbers? Y or N", "");
@@ -40,13 +50,21 @@ function writePassword() {
   };
 
   var special = prompt("Should the password include special characters? Y or N")
-  if (special == "y" || special == "n") {
+  if (special == "y") {
+    alert("Thank you!");
+    passwordArray.push(special);
+  } else if (special == "n") {
     alert("Thank you!");
   } else if (special != "y" && special != "n") {
     prompt("Please enter a valid response. Should the password include special characters? Y or N", "");
     alert("Thank you!");
   };
-  
+
+
+
+
+
+
   /*
   var upperCase = confirm("The password should include upper case letters.")
   if (upperCase) {
