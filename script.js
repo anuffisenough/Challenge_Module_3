@@ -5,10 +5,12 @@ var lowerCaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var special = [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
 var passwordArray = [];
+var passwordArray2 = [];
+var passwardArray3 = [];
 
-// Write password to the #password input
+
 function writePassword() {
-  
+//Determines password lenght and iteration number. Prompts to re-enter if outside of specified range.
   var length = prompt("Please choose a password length as a whole number from 8 to 128 characters.", "");
   if (8 <= length && length <= 128) {
     alert("Thank you!");
@@ -16,10 +18,10 @@ function writePassword() {
     prompt("Please choose a valid password length as a whole number from 8 to 128 characters.", "");
   };
 
+//User input determines upper case inclusion and start of password character array. Validates input to get appropriate y or n answer.
   var upperCase = prompt("Should the password include upper case letters? Y or N")
   if (upperCase == "y") {
     alert("Thank you!");
-    passwordArray.push(upperCaseLetters);
   } else if (upperCase == "n") {
     alert("Thank you!");
   } else if (upperCase != "y" && upperCase != "n") {
@@ -27,10 +29,10 @@ function writePassword() {
     alert("Thank you!");
   };
 
+//User input determines lower case inclusion and character array. Validates input to get appropriate y or n answer.
   var lowerCase = prompt("Should the password include lower case letters? Y or N")
   if (lowerCase == "y") {
     alert("Thank you!");
-    passwordArray.push(lowerCaseLetters);
   } else if (lowerCase == "n") {
     alert("Thank you!");
   } else if (lowerCase != "y" && lowerCase != "n") {
@@ -38,10 +40,10 @@ function writePassword() {
     alert("Thank you!");
   };
 
+//User input determines numberal inclusion. Validates input to get appropriate y or n answer.
   var numbers = prompt("Should the password include numbers? Y or N")
   if (numbers == "y") {
     alert("Thank you!");
-    passwordArray.push(numbers);
   } else if (numbers == "n") {
     alert("Thank you!");
   } else if (numbers != "y" && numbers != "n") {
@@ -49,10 +51,10 @@ function writePassword() {
     alert("Thank you!");
   };
 
+//User input determines special character inclusion. Validates input to get appropriate y or n answer.
   var special = prompt("Should the password include special characters? Y or N")
   if (special == "y") {
     alert("Thank you!");
-    passwordArray.push(special);
   } else if (special == "n") {
     alert("Thank you!");
   } else if (special != "y" && special != "n") {
@@ -60,51 +62,8 @@ function writePassword() {
     alert("Thank you!");
   };
 
-
-
-
-
-
-  /*
-  var upperCase = confirm("The password should include upper case letters.")
-  if (upperCase) {
-    alert("Thank you!");
-  };
-
-  var lowerCase = confirm("The password should include lower case letters.")
-  if (lowerCase) {
-    alert("Thank you!");
-  };
-
-  var numbers = confirm("The password should include numbers.")
-  if (numbers) {
-    alert("Thank you!");
-  };
-
-  var special = confirm("The password should include special characters.")
-  if (special) {
-    alert("Thank you!");
-  };
-
-  /*
-  var passwordNumeralsInput = window.prompt("Should the password include numbers? Y or N")
-  if (passwordNumeralsInput == "y" || passwordNumeralsInput == "n") {
-    window.alert("Thank you!");
-  } else if (passwordNumeralsInput != "y" && passwordNumeralsInput != "n") {
-    window.prompt("Should the password include numbers? Y or N", "");
-    window.alert("Thank you!");
-  };
-
-  var passwordSpecialCharacterInput = window.prompt("Should the password include special characters? Y or N")
-  if (passwordSpecialCharacterInput == "y" || passwordSpecialCharacterInput == "n") {
-    window.alert("Thank you!");
-  } else if (passwordSpecialCharacterInput != "y" && passwordSpecialCharacterInput != "n") {
-    window.prompt("Should the password include special characters? Y or N", "");
-    window.alert("Thank you!");
-  }
-  
-*/
-  window.alert("Please view your password below")
+//Unable to finalize array iteration to generate password.
+  alert("Please view your password below")
 
   var password = generatePassword();
 
